@@ -37,7 +37,7 @@ jobs:
           cd ./site
           pwd
           ls -al
-          ls -al ./theme
+          ls -al ./themes
           hugo
       
       - name: Send site to S3
