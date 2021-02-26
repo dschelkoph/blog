@@ -36,5 +36,5 @@ paginate = 5
 
 [deployment]
 [[deployment.targets]]
-name = "aws-delopy"
+name = "aws-deploy"
 url = "s3://blog.digitalschel.net?region=us-east-1"
