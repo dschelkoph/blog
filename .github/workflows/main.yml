@@ -45,7 +45,7 @@ jobs:
           S3_ACCESS_KEY: ${{secrets.S3_ACCESS_KEY}}
           S3_SECRET_KEY: ${{secrets.S3_SECRET_KEY}}
         run: |
-          sudo pip install -y awscli
+          sudo pip install awscli
           mkdir ~/.aws
           
           cat << EOF > ~/.aws/config
