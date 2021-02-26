@@ -18,6 +18,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - uses: actions/setup-go@v2
         with:
           go-version: "^1.16.0"
@@ -36,9 +38,6 @@ jobs:
           cd $GITHUB_WORKSPACE
           git submodule update --init --recursive
           cd ./site
-          pwd
-          ls -al
-          ls -al ./themes
           hugo
       
       - name: Send site to S3
