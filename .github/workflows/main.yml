@@ -59,7 +59,10 @@ jobs:
           aws_secret_access_key = $S3_SECRET_KEY
           EOF
           
-          sudo pip install awscli
+          pwd
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
           aws configure list-profiles
 
           cd $GITHUB_WORKSPACE
