@@ -34,6 +34,7 @@ jobs:
       - name: Build site
         run: |
           cd $GITHUB_WORKSPACE
+          cd ./site
           hugo
       
       - name: Send site to S3
@@ -57,5 +58,6 @@ jobs:
           EOF
           
           cd $GITHUB_WORKSPACE
+          cd ./site
           hugo deploy 
           
