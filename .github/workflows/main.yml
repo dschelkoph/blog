@@ -45,7 +45,6 @@ jobs:
           S3_ACCESS_KEY: ${{secrets.S3_ACCESS_KEY}}
           S3_SECRET_KEY: ${{secrets.S3_SECRET_KEY}}
         run: |
-          sudo pip install awscli
           mkdir ~/.aws
           
           cat << EOF > ~/.aws/config
@@ -60,7 +59,8 @@ jobs:
           aws_secret_access_key = $S3_SECRET_KEY
           EOF
           
-          cat ~/.aws/credentials
+          sudo pip install awscli
+          aws configure list-profiles
 
           cd $GITHUB_WORKSPACE
           cd ./site
