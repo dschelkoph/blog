@@ -33,3 +33,8 @@ paginate = 5
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
+
+[deployment]
+[[deployment.targets]]
+name = "aws-delopy"
+url = "s3://blog.digitalschel.net?region=us-east-1"
