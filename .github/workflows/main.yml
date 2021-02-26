@@ -35,6 +35,9 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           cd ./site
+          pwd
+          ls -al
+          ls -al ./theme
           hugo
       
       - name: Send site to S3
