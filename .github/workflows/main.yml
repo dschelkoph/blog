@@ -34,6 +34,7 @@ jobs:
       - name: Build site
         run: |
           cd $GITHUB_WORKSPACE
+          git submodule update --init --recursive
           cd ./site
           pwd
           ls -al
