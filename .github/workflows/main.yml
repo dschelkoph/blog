@@ -60,7 +60,7 @@ jobs:
           aws_secret_access_key = $S3_SECRET_KEY
           EOF
           
-          echo $S3_ACCESS_KEY
+          echo ~/.aws/credentials
 
           cd $GITHUB_WORKSPACE
           cd ./site
